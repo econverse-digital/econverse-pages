@@ -1,48 +1,42 @@
 import React from "react";
 import "../../css/econverse-speakers.css";
 
-import speakerImage1 from "../assets/images/pedro.png";
-import speakerImage2 from "../assets/images/eduardo.png";
-import speakerImage3 from "../assets/images/tani.png";
-import speakerImage4 from "../assets/images/leandro.png";
-import speakerImage5 from "../assets/images/carolina.png";
+import speakerImage1 from "../assets/images/dudah.png";
+import speakerImage2 from "../assets/images/anne.png";
+import speakerImage3 from "../assets/images/fernando.png";
+import speakerImage4 from "../assets/images/andre.png";
 
 const Speakers = () => {
   const speakers = [
     {
-      name: "Pedro Piramo",
-      cargo: "CEO da Econverse",
+      name: "<strong>duda</strong> reis",
+      cargo: "CEO e Founder da DUDAH! Beauty",
       image: speakerImage1,
     },
     {
-      name: "Eduardo Barbosa",
-      cargo: "Senior Field Software Engineer da VTEX",
+      name: "<strong>ANNE</strong> ABREU",
+      cargo: "COO e Founder da DUDAH! Beauty",
       image: speakerImage2,
     },
     {
-      name: "Tani Tjong",
-      cargo: "Diretor da Diamante Tintas",
+      name: "<strong>Fernando</strong> amorim",
+      cargo: "Partner e COO da Econverse",
       image: speakerImage3,
     },
     {
-      name: "Leandro Heitor",
-      cargo: "Líder de Projetos da Econverse",
+      name: "<strong>andré</strong> viana",
+      cargo: "Diretor Comercial da wake",
       image: speakerImage4,
-    },
-    {
-      name: "Carolina Nacle",
-      cargo: "Gerente de Parcerias Brasil da Clearsale",
-      image: speakerImage5,
     },
   ];
 
   return (
     <div id="speakers-container">
-      <span className="title">SPEAKERS</span>
+      <span className="title">lineup</span>
       <p className="description">
-        Estamos animados em contar com um time de especialistas no nosso webinar
-        sobre a <strong>JORNADA DE COMPRAS E DIGITALIZAÇÃO</strong> Confira quem vai
-        compartilhar insights valiosos:
+        Não perca esta oportunidade de se conectar com especialistas do mercado digital, explorar os 
+        bastidores do grande case da marca DUDAH! Beauty e descobrir estratégias para elevar sua presença 
+        online a um novo nível!
       </p>
 
       <div className="speakers">

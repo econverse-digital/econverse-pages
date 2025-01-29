@@ -8,23 +8,30 @@ const Topics = () => {
   const topics = [
     {
       number: "#1",
-      title: "Jornada de compras: Digitalização da operação no e-commerce",
+      title: "Concepção da marca e o impacto dos parceiros estratégicos:",
       description:
-        "Saiba como conectar todos os pontos da jornada do cliente e criar uma experiência omnichannel impecável. A <strong>Diamante Tintas</strong> compartilhará sua experiência de digitalização, revelando os desafios superados, as soluções adotadas e os resultados que impulsionaram seu negócio.",
+        "Descubra a história por trás da criação da DUDAH! Beauty e aprenda como a escolha dos parceiros certos pode impulsionar significativamente seus resultados no e-commerce, potencializando o crescimento e a inovação da sua marca.",
       duration: "20 Min",
     },
     {
       number: "#2",
-      title: "Soluções de segurança e infraestrutura",
+      title: "Passo a passo para projetos digitais de sucesso e construção de um site de referência:",
       description:
-        "Segurança e performance são essenciais para o sucesso de qualquer e-commerce. Com a <strong>ClearSale</strong>, você aprenderá como proteger sua operação com soluções avançadas de antifraude. E a <strong>VTEX</strong> trará insights sobre como uma infraestrutura sólida pode garantir escalabilidade, estabilidade e crescimento sustentável.",
+        "Aprenda como planejar, implementar e evoluir iniciativas digitais para garantir alta performance e crescimento sustentável, como fez a DUDAH! Beauty. Descubra como a marca construiu uma plataforma digital alinhada com design impactante, funcionalidade eficiente e uma experiência de usuário excepcional.",
       duration: "20 Min",
     },
     {
       number: "#3",
-      title: "Soluções práticas e cases",
+      title: "Conexão com o cliente através do CRM:",
       description:
-        "Nada melhor do que aprender com quem fez acontecer! Nossos especialistas apresentarão cases reais, com soluções práticas que você pode aplicar no seu negócio para transformar desafios em oportunidades e potencializar resultados.",
+        "Explore como um plano de comunicação bem estruturado e o uso estratégico de ferramentas de CRM podem fortalecer relações, fidelizar clientes e alavancar vendas.",
+      duration: "20 Min",
+    },
+    {
+      number: "#4",
+      title: "Inovação no mercado de cosméticos:",
+      description:
+        "Descubra as tendências tecnológicas que estão moldando o futuro do setor, como personalização e integração de novas tecnologias.",
       duration: "20 Min",
     },
   ];

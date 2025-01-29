@@ -5,17 +5,16 @@ const About = () => {
   return (
     <div id="about-container">
       <div className="left-side">
-        <span>O WEBINAR</span>
-        <p>JORNADA DE COMPRAS E DIGITALIZAÇÃO</p>
+        <span>SOBRE 0 WEBINAR</span>
+        <p>O impacto da indústria <br/> de <strong>cosméticos no digital</strong> </p>
       </div>
 
       <p className="about-text">
-        Prepare-se para um mergulho profundo na <strong>Jornada de Compras e
-        Digitalização!</strong> No dia <strong>05 DE DEZEMBRO, às 19h</strong>, a Econverse, agência
-        especialista em implementação de e-commerce, realizará um webinar
-        imperdível sobre omnicanalidade. Nosso objetivo é mostrar como integrar
-        canais físicos e digitais para oferecer uma experiência de compra fluida
-        e consistente.
+        Participe do nosso webinar exclusivo no <strong>dia  20 de fevereiro, às 19h</strong> e mergulhe no 
+        universo da indústria de cosméticos no digital. Este evento é uma oportunidade 
+        única para entender como <strong>construir um e-commerce de sucesso,</strong> acompanhar 
+        as melhores estratégias de comunicação e explorar os desafios e oportunidades que 
+        este mercado em constante evolução oferece.
       </p>
     </div>
   );

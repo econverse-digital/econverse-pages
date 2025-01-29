@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "concurrently \"vite\" \"gulp\"",
+    "build": "vite build && gulp sass && gulp scripts && gulp copy",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +25,13 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",
     "globals": "^15.11.0",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.83.4",
     "vite": "^5.4.9"
   }
 }
