@@ -50,9 +50,9 @@ const Form = () => {
       setNome("");
       setEmail("");
 
-      const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSelUMGninkClFf1AujcKgyhulyV9kShG5YiF6HnjoIpftMz7w/formResponse';
+      const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdA01GGJDO2JWXlg-AdFJzBUg5lEc_yXpAVUHNkuFA9wLPG3A/formResponse';
       const googleFormData = new FormData();
-      googleFormData.append('entry.692376335', email);
+      googleFormData.append('entry.355458948', email);
       fetch(googleFormURL, {
         method: 'POST',
         body: googleFormData
