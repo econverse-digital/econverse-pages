@@ -1,6 +1,8 @@
 import React from "react";
 import "../../css/econverse-topics.css";
-import iconDuration from "../assets/images/icon-duration.png";
+import iconDuration from "../assets/svg/icon-duration.svg";
+import iconPlay from "../assets/svg/icon-play.svg";
+import iconStar from "../assets/svg/star.svg";
 
 const Topics = () => {
   const isMobile = window.innerWidth < 768;
@@ -38,13 +40,16 @@ const Topics = () => {
 
   return (
     <div id="topics-container">
-      <span>O que você irá aprender:</span>
+      <span>O QUE você IRÁ APRENDER</span>
 
       <div className="topics">
         {topics.map((topics) => (
           <div className="topic">
-            {!isMobile && <p className="number">{topics.number}</p>}
-
+            {!isMobile && <p className="number">
+              <img src={iconStar} alt="star"/>
+             <span>{topics.number}</span>
+            </p>}
+            
             <div className="description-container">
               {isMobile && (
                 <div>
@@ -56,16 +61,23 @@ const Topics = () => {
               {!isMobile && (
                 <h3 className="title">{topics.title}</h3>
               )}
-              
+
               <p className="description" dangerouslySetInnerHTML={{ __html: topics.description }} ></p>
 
             </div>
-            <div className="duration-container">
-              <img src={iconDuration} alt="Icone de duração" />
-              <p className="duration">{topics.duration}</p>
-            </div>
           </div>
         ))}
+      </div>
+
+      <div className="duration-container">
+        <div className="duration-time">
+          <img src={iconDuration} alt="Icone de duração" />
+          <p className="duration-text">Duração da webinar: <strong>1h</strong></p>
+        </div>
+        <div className="duration-link">
+          <img src={iconPlay} alt="Icone de duração" />
+          <p className="duration-text">Transmissão: <strong>Youtube</strong></p>
+        </div>
       </div>
     </div>
   );
