@@ -43,12 +43,17 @@ const Speakers = () => {
         {speakers.map((speaker) => (
           <div className="person" key={speaker.name}>
             <img src={speaker.image} alt={speaker.name} />
-            <div className="person-info">
-              <span>{speaker.name}</span>
-              <p>{speaker.cargo}</p>
-            </div>
+
           </div>
         ))}
+        <div className="person-container">
+          {speakers.map((speaker) => (
+            <div className="person-container-info" key={speaker.name}>
+              <span dangerouslySetInnerHTML={{ __html: speaker.name }}/>
+              <p dangerouslySetInnerHTML={{ __html: speaker.cargo }}/>
+            </div>
+          ))}
+        </div>
       </div>
 
     </div>

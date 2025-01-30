@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../css/econverse-form.css";
+import iconDuration from "../assets/images/background-image.png";
 
 import formImage from "../assets/images/form-image.png";
 import formImageMobile from "../assets/images/form-image-mobile.png";
@@ -76,7 +77,7 @@ const Form = () => {
         <PopUpForm show={showPopup} hide={() => setShowPopup(false)} />
       )}
 
-      <div id="form-container">
+      <div id="form-container" style={{ backgroundImage: `url(${iconDuration})`}}>
         <div className="left-side">
           <span>Inscreva-se!</span>
           <p>

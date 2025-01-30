@@ -1,5 +1,5 @@
 #speakers-container {
-  padding: 100px;
+  padding: 90px 100px;
   display: flex;
   flex-direction: column;
   background: white;
@@ -10,11 +10,14 @@
 
   .title {
     font-family: 'Work Sans';
-    font-size: 38px;
-    color: black;
-    font-weight: bold;
-    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: #181818;
+    margin: 0 0 32px;
     text-align: center;
+    text-transform: capitalize;
 
     @media (max-width: 768px) {
       font-size: 36px;
@@ -24,10 +27,14 @@
 
   .description {
     font-family: 'Work Sans';
-    font-size: 16px;
-    color: black;
-    margin: 10px auto 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #181818;
+    margin: 0 auto 42px;
     max-width: 726px;
+    text-align: center;
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -51,17 +58,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 32px;
+      text-transform: uppercase;
 
       img {
-        max-width: 180px;
-        max-height: 199px;
+        max-width:164px;
+        max-height: 307px;
       }
 
       &-info {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         margin-top: 10px;
 
         span {
@@ -69,7 +76,7 @@
           font-size: 20px;
           font-weight: bold;
           color: black;
-          text-align: center;
+          text-align: left;
         }
 
         p {
@@ -77,9 +84,46 @@
           font-size: 14px;
           font-weight: 300;
           color: black;
-          text-align: center;
+          text-align: left;
           line-height: 1;
           margin: 0;
+        }
+      }
+    }
+
+    .person-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+
+        span {
+          font-family: "Work Sans";
+          font-size: 20px;
+          font-weight: 400;
+          color: #181818;
+          text-align: left;
+          text-transform: uppercase;
+
+          strong{
+            font-weight: 600;
+          }
+        }
+
+        p {
+          font-family: "Work Sans";
+          font-size: 14px;
+          font-weight: 300;
+          color: #181818;
+          text-align: left;
+          line-height: 1;
+          margin: 0;
+          text-transform: uppercase;
         }
       }
     }
