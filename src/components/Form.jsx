@@ -13,9 +13,6 @@ const Form = () => {
   const isMobile = window.innerWidth < 768;
   const [email, setEmail] = useState("");
   const [nome, setNome] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [empresa, setEmpresa] = useState("");
-  const [cargo, setCargo] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
   const [isHovered, setIsHovered] = useState(false);
@@ -45,16 +42,13 @@ const Form = () => {
         "Accept": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
-      body: JSON.stringify({ nome, email, phone: telefone, enterprise: empresa, role: cargo }),
+      body: JSON.stringify({ nome, email }),
     });
 
     if (response.ok) {
       setShowPopup(true);
       setNome("");
       setEmail("");
-      setTelefone("");
-      setEmpresa("");
-      setCargo("");
 
       const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSelUMGninkClFf1AujcKgyhulyV9kShG5YiF6HnjoIpftMz7w/formResponse';
       const googleFormData = new FormData();

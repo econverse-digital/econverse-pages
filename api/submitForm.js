@@ -3,12 +3,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { nome, email, phone, enterprise, role } = req.body;
+  const { nome, email } = req.body;
 
   const RD_API_KEY = process.env.RD_API_KEY;
   const eco_appkey = process.env.eco_appkey;
   const eco_apptoken = process.env.eco_apptoken;
   const api_key = process.env.api_key;
+  console.log("🚀 ~ handler ~ api_key:", api_key)
 
   try {
     const response = await fetch(
@@ -27,9 +28,6 @@ export default async function handler(req, res) {
           payload: {
             name: nome,
             email: email,
-            personal_phone: phone,
-            company_name: enterprise,
-            job_title: role,
             tags: ["Evento Econverce Webinar"],
             conversion_identifier: "Econverse Webinar",
           }
