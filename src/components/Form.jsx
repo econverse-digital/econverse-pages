@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../../css/econverse-form.css";
-import iconDuration from "../assets/images/background-image.png";
 
-import formImage from "../assets/images/form-image.png";
-import formImageMobile from "../assets/images/form-image-mobile.png";
+import formImage from "../assets/images/bg-form-image.png";
+import circles from "../assets/svg/circles.svg";
+import iconArrow from "../assets/svg/icon-arrow.svg";
+import iconArrowLight from "../assets/svg/icon-arrow-light.svg";
+import formImageMobile from "../assets/images/bg-form-image-mobile.png";
 
 import PopUpForm from "../components/PopUpForm.jsx";
 
@@ -16,13 +18,15 @@ const Form = () => {
   const [cargo, setCargo] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleTelefoneChange = (e) => {
-    const value = e.target.value.replace(/\D/g, "");
-    const formattedValue = value
-      .replace(/^(\d{2})(\d)/, "($1) $2")
-      .replace(/(\d{5})(\d{4})$/, "$1-$2");
-    setTelefone(formattedValue);
-  };
+  const [isHovered, setIsHovered] = useState(false);
+
+  // const handleTelefoneChange = (e) => {
+  //   const value = e.target.value.replace(/\D/g, "");
+  //   const formattedValue = value
+  //     .replace(/^(\d{2})(\d)/, "($1) $2")
+  //     .replace(/(\d{5})(\d{4})$/, "$1-$2");
+  //   setTelefone(formattedValue);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,12 +76,12 @@ const Form = () => {
   };
 
   return (
-    <>
+    <div id="form-container" style={{ backgroundImage: `url(${isMobile? formImageMobile : formImage})`}}>
       {showPopup && (
         <PopUpForm show={showPopup} hide={() => setShowPopup(false)} />
       )}
 
-      <div id="form-container" style={{ backgroundImage: `url(${iconDuration})`}}>
+      <div id="form-content" >
         <div className="left-side">
           <span>Inscreva-se!</span>
           <p>
@@ -85,74 +89,48 @@ const Form = () => {
             material gratuitamente :)
           </p>
 
-          <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor="nome">
-              Nome
-              <input
-                type="text"
-                name="nome"
-                value={nome}
-                placeholder="Seu nome completo"
-                onChange={(e) => setNome(e.target.value)}
-              />
-            </label>
-
-            <label htmlFor="email">
-              E-mail
-              <input
-                type="email"
-                name="email"
-                value={email}
-                placeholder="Seu melhor e-mail"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </label>
-
-            <label htmlFor="telefone">
-              Telefone
-              <input
-                type="text"
-                name="telefone"
-                value={telefone}
-                placeholder="Telefone"
-                onChange={handleTelefoneChange}
-                maxLength="15" // Limita o comprimento para o formato (XX) XXXXX-XXXX
-              />
-            </label>
-
-            <label htmlFor="empresa">
-              Empresa
-              <input
-                type="text"
-                name="empresa"
-                value={empresa}
-                placeholder="Empresa:"
-                onChange={(e) => setEmpresa(e.target.value)}
-              />
-            </label>
-
-            <label htmlFor="cargo">
-              Cargo
-              <input
-                type="text"
-                name="cargo"
-                value={cargo}
-                placeholder="Cargo:"
-                onChange={(e) => setCargo(e.target.value)}
-              />
-            </label>
-
-            <button type="submit">CADASTRAR</button>
-          </form>
+          <img src={circles} alt="circles" />
         </div>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="nome">
+            Nome
+            <input
+              type="text"
+              name="nome"
+              value={nome}
+              placeholder="Seu nome completo"
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </label>
 
-        <img
-          className="form-image"
-          src={isMobile ? formImageMobile : formImage}
-          alt="Imagem formulário"
-        />
+          <label htmlFor="email">
+            E-mail
+            <input
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Seu melhor e-mail"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+
+          <button       
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            type="submit"
+          > 
+            ENVIAR 
+            <img 
+              src={isHovered ? iconArrowLight : iconArrow} alt="arrow"
+              style={{
+                transform: isHovered ? "translateX(3px)" : "translateX(0)",
+                transition: "transform 0.3s ease",
+              }}
+            
+            /></button>
+        </form>
       </div>
-    </>
+    </div>
   );
 
 };

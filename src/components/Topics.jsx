@@ -40,20 +40,23 @@ const Topics = () => {
 
   return (
     <div id="topics-container">
-      <span>O QUE você IRÁ APRENDER</span>
+      <span>O QUE você IRÁ APRENDER?</span>
 
       <div className="topics">
         {topics.map((topics) => (
           <div className="topic">
             {!isMobile && <p className="number">
               <img src={iconStar} alt="star"/>
-             <span>{topics.number}</span>
+              <span>{topics.number}</span>
             </p>}
             
             <div className="description-container">
               {isMobile && (
                 <div>
-                  <p className="number">{topics.number}</p>
+                  <p className="number">
+                    <img src={iconStar} alt="star"/>
+                    <span>{topics.number}</span>
+                  </p>
                   <h3 className="title">{topics.title}</h3>
                 </div>
               )}

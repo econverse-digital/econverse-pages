@@ -51,6 +51,7 @@
     @media (max-width: 768px) {
       flex-wrap: wrap;
       gap: 5px;
+      justify-content: space-between;
     }
 
     .person {
@@ -63,6 +64,10 @@
       img {
         max-width:164px;
         max-height: 307px;
+
+        @media (max-width: 768px) {
+          max-width: 81px;
+        }
       }
 
       &-info {
@@ -95,6 +100,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
 
       &-info {
         display: flex;

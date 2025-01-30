@@ -2,9 +2,9 @@ import React from "react";
 import "../../css/econverse-footer.css";
 
 import glassDoorImage from "../assets/images/glassdoor-image.png";
-import linkedinIcon from "../assets/images/linkedin-icon.png";
-import facebookIcon from "../assets/images/facebook-icon.png";
-import instagramIcon from "../assets/images/instagram-icon.png";
+import linkedinIcon from "../assets/svg/icon-linkedin.svg";
+import facebookIcon from "../assets/svg/icon-facebook.svg";
+import instagramIcon from "../assets/svg/icon-instagram.svg";
 
 const Footer = () => {
   return (
