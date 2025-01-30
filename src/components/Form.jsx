@@ -26,6 +26,7 @@ const Form = () => {
   // };
 
   const handleSubmit = async (e) => {
+    setShowPopup(true);
     e.preventDefault();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -46,7 +47,7 @@ const Form = () => {
     });
 
     if (response.ok) {
-      setShowPopup(true);
+
       setNome("");
       setEmail("");
 

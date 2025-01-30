@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/econverse-home.css";
 
 import bannerImage from "../assets/images/banner-event-desk.png";
-import bannerImageMob from "../assets/images/main-banner-mobile.png";
+import bannerImageMob from "../assets/images/banner-event-mob.png";
 
 import Form from "../components/Form.jsx";
 import About from "../components/About.jsx";

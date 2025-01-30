@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/econverse-popup-form.css";
-import checkIcon from "../assets/images/check-circle.png";
+import checkIcon from "../assets/svg/virified.svg";
 
 const PopUpForm = ({show, hide}) => {
 
@@ -12,7 +12,7 @@ const PopUpForm = ({show, hide}) => {
         <div className="form-container">
           <img src={checkIcon} alt="Check Icon" />
   
-          <span>Inscrição realizada!</span>
+          <span>Inscrição <strong>realizada!</strong></span>
   
           <p>
             Obrigada por se inscrever! Em breve, você receberá mais informações
