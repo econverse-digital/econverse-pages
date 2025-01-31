@@ -19,7 +19,7 @@ const Home = () => {
       <a href="/#form-container">
         <img src={isMobile ? bannerImageMob : bannerImage} alt="Banner Jornada de compras" />
       </a>
-
+      <Form />
       <About />
       <Topics />
       <Speakers />
