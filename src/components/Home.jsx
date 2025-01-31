@@ -4,10 +4,12 @@ import "../../css/econverse-home.css";
 import bannerImage from "../assets/images/banner-event-desk.png";
 import bannerImageMob from "../assets/images/banner-event-mob.png";
 
+
 import Form from "../components/Form.jsx";
 import About from "../components/About.jsx";
 import Speakers from "../components/Speakers.jsx";
 import Topics from "../components/Topics.jsx";
+import FormFull from "./FormFull.jsx";
 // import BottomBanner from "../components/BottomBanner.jsx";
 
 const Home = () => {
@@ -19,7 +21,8 @@ const Home = () => {
       <a href="/#form-container">
         <img src={isMobile ? bannerImageMob : bannerImage} alt="Banner Jornada de compras" />
       </a>
-      <Form />
+    
+      <FormFull/>
       <About />
       <Topics />
       <Speakers />
