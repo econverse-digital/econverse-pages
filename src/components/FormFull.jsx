@@ -76,7 +76,7 @@ const FormFull = () => {
   };
 
   return (
-    <div id="form-container" style={{ backgroundImage: `url(${isMobile? formImageMobile : formImage})`}}>
+    <div id="form-full-container" style={{ backgroundImage: `url(${isMobile? formImageMobile : formImage})`}}>
       {showPopup && (
         <PopUpForm show={showPopup} hide={() => setShowPopup(false)} />
       )}
@@ -85,8 +85,7 @@ const FormFull = () => {
         <div className="left-side">
           <span>Inscreva-se!</span>
           <p>
-            Se você não conseguir participar da live, registra-se para receber o
-            material gratuitamente :)
+          Não perca essa oportunidade única! Tenha acesso a insights valiosos, especialistas renomados e conteúdos exclusivos que podem transformar sua jornada.
           </p>
 
           <img src={circles} alt="circles" />

@@ -3,6 +3,7 @@ import "../../css/econverse-topics.css";
 import iconDuration from "../assets/svg/icon-duration.svg";
 import iconPlay from "../assets/svg/icon-play.svg";
 import iconStar from "../assets/svg/star.svg";
+import ScrollToSection from "./ScrollButton";
 
 const Topics = () => {
   const isMobile = window.innerWidth < 768;
@@ -82,6 +83,8 @@ const Topics = () => {
           <p className="duration-text">Transmissão: <strong>Youtube</strong></p>
         </div>
       </div>
+
+      <ScrollToSection text="Quero participar!" sectionId="form-full-container" background="#181818" color="#ede4c0" />
     </div>
   );
 };
