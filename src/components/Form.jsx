@@ -52,7 +52,7 @@ const Form = () => {
 
       const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSePVbMxVvknBHZky55FElxzyI27XKDpKXJiQmGTWD72DGThFw/formResponse';
       const googleFormData = new FormData();
-      googleFormData.append('entry.1531026390', email);
+      googleFormData.append('entry.62206188', email);
       fetch(googleFormURL, {
         method: 'POST',
         body: googleFormData
