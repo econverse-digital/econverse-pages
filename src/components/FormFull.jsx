@@ -25,6 +25,7 @@ const FormFull = () => {
     const formattedValue = value
       .replace(/^(\d{2})(\d)/, "($1) $2")
       .replace(/(\d{5})(\d{4})$/, "$1-$2");
+    
     setTelefone(formattedValue);
   };
 
@@ -32,6 +33,12 @@ const FormFull = () => {
     e.preventDefault();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log('telefone>>>',telefone.length)
+    
+    if (telefone.length < 13) {
+      alert("Por favor, insira um telefone valido");
+      return;
+    }
 
     if (!emailRegex.test(email)) {
       alert("Por favor, insira um e-mail válido.");
