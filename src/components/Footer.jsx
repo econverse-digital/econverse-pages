@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <div className="bottom-content">
-        <p>© 2024 Econverse - Todos os direitos reservados</p>
+        <p>© 2025 Econverse - Todos os direitos reservados</p>
       </div>
     </footer>
   );
