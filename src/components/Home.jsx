@@ -1,9 +1,8 @@
 import React from "react";
-import "../../css/econverse-home.css";
+import "../../scss/econverse-home.scss";
 
 import bannerImage from "../assets/images/banner-event-desk-cta.png";
 import bannerImageMob from "../assets/images/banner-event-mob-cta.png";
-
 
 import Form from "../components/Form.jsx";
 import About from "../components/About.jsx";

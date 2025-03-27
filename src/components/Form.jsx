@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "../../css/econverse-form.css";
+import "../../scss/econverse-form.scss";
 
-import formImage from "../assets/images/bg-form-image.png";
+import formImage from "../assets/images/bg-form-image-new.png";
 import circles from "../assets/svg/circles.svg";
 import iconArrow from "../assets/svg/icon-arrow.svg";
 import iconArrowLight from "../assets/svg/icon-arrow-light.svg";
-import formImageMobile from "../assets/images/bg-form-image-mobile.png";
+import formImageMobile from "../assets/images/bg-form-image-mobile-new.png";
 
 import PopUpForm from "../components/PopUpForm.jsx";
 

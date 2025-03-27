@@ -1,5 +1,6 @@
 import React from "react";
-import "../../css/econverse-topics.css";
+import "../../scss/econverse-topics.scss";
+
 import iconDuration from "../assets/svg/icon-duration.svg";
 import iconPlay from "../assets/svg/icon-play.svg";
 import iconStar from "../assets/svg/star.svg";

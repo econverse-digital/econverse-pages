@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/econverse-footer.css";
+import "../../scss/econverse-footer.scss";
 
 import glassDoorImage from "../assets/images/glassdoor-image.png";
 import linkedinIcon from "../assets/svg/icon-linkedin.svg";

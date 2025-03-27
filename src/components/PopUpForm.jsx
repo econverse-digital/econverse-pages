@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../../css/econverse-popup-form.css";
+import "../../scss/econverse-popup-form.scss";
+
 import checkIcon from "../assets/svg/virified.svg";
 
 const PopUpForm = ({show, hide}) => {

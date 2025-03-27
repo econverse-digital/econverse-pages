@@ -1,0 +1,90 @@
+$color_1: #ddd;
+$color_2: #fdfdfd;
+$color_3: #ede4c0;
+$font-family_1: Homenaje;
+$font-family_2: "Work Sans";
+$font-family_3: "work Sans",Poppins;
+
+#about-container {
+	background: #181818;
+	padding: 150px 98px 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.about-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 28px;
+	}
+	.left-side {
+		max-width: 518px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		span {
+			color: $color_1;
+			font-family: $font-family_1;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 19px;
+			letter-spacing: .15em;
+			text-transform: uppercase;
+		}
+		p {
+			color: $color_2;
+			font-family: $font-family_2;
+			font-size: 32px;
+			font-weight: 300;
+			line-height: 42px;
+			letter-spacing: .05em;
+			margin: 0;
+			text-transform: uppercase;
+			strong {
+				font-weight: 700;
+			}
+		}
+	}
+	.about-text {
+		color: $color_1;
+		font-family: $font-family_3;
+		font-size: 14px;
+		line-height: 20p;
+		letter-spacing: .05em;
+		max-width: 634px;
+		strong {
+			color: $color_3;
+			font-weight: 700;
+			letter-spacing: .8px;
+		}
+	}
+	.about-image {
+		width: 100%;
+		max-width: 500px;
+	}
+}
+@media (max-width:768px) {
+	#about-container {
+		flex-direction: column;
+		padding: 82px 20px;
+		justify-content: unset;
+		.about-content {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.left-side {
+			span {
+				font-size: 16px;
+			}
+			p {
+				font-size: 28px;
+				line-height: 38px;
+			}
+		}
+		.about-text {
+			font-size: 14px;
+			margin: 0;
+		}
+	}
+}

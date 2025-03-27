@@ -1,0 +1,57 @@
+$color_1: #fff;
+$color_2: #000;
+$font-family_1: "Work Sans";
+
+#bannerBottom-container {
+	padding: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	span {
+		font-family: $font-family_1;
+		font-size: 38px;
+		color: $color_1;
+		font-weight: 700;
+		margin: 0;
+		text-align: center;
+		font-style: italic;
+		line-height: 120%;
+	}
+	p {
+		font-family: $font-family_1;
+		font-size: 16px;
+		color: $color_1;
+		margin: 0;
+		max-width: 690px;
+		font-weight: 400;
+	}
+	.link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $font-family_1;
+		font-size: 14px;
+		color: $color_2;
+		font-weight: 700;
+		margin: 0;
+		text-align: center;
+		text-decoration: none;
+		transition: all .2s ease-in-out;
+		background: #f1c400;
+		border-radius: 200px;
+		width: 223px;
+		height: 38px;
+		&:hover {
+			background: #3019b2;
+			color: $color_1;
+		}
+	}
+}
+@media (max-width:768px) {
+	#bannerBottom-container {
+		padding: 70px 20px;
+	}
+}

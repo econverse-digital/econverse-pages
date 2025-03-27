@@ -1,5 +1,6 @@
 import React from "react";
-import "../../css/econverse-bannerBottom.css";
+import "../../scss/econverse-bannerBottom.scss";
+
 import iconDuration from "../assets/images/background-image.png";
 
 const BottomBanner = () => {

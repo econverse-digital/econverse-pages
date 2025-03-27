@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../css/econverse-scroll-to-section.css";
+import "../../scss/econverse-scroll-to-section.scss";
 
 const ScrollToSection = ({ text, sectionId, background, color }) => {
   const handleClick = () => {

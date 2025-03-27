@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/econverse-header.css";
+import "../../scss/econverse-header.scss";
 
 const Header = () => {
   const isMobile = window.innerWidth < 768;

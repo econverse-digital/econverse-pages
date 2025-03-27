@@ -1,5 +1,6 @@
 import React from "react";
-import "../../css/econverse-about.css";
+import "../../scss/econverse-about.scss";
+
 import ScrollToSection from "./ScrollButton";
 
 const About = () => {

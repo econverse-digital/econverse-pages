@@ -1,0 +1,218 @@
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-SemiBold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+$color_1: #181818;
+$color_2: #000;
+$font-family_1: "Givonic";
+
+#speakers-container {
+	padding: 90px 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		padding: 70px 20px;
+		background-repeat: no-repeat;
+		background-color: white;
+	}
+
+	.description {
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+		color: $color_1;
+		margin: 0 auto 42px;
+		max-width: 726px;
+		text-align: center;
+
+		@media (max-width: 768px) {
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+
+		@media (max-width: 768px) {
+			align-items: center;
+		}
+
+		.title {
+			font-family: $font-family_1;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 42px;
+			letter-spacing: 0.05em;
+			color: $color_1;
+			margin: 0 0 32px;
+			text-align: left;
+
+			@media (max-width: 768px) {
+				font-size: 28px;
+			}
+		}
+
+		.speakers-container {
+			display: flex;
+			gap: 120px;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+				gap: 32px;
+			}
+
+			.speakers {
+				display: grid;
+				width: fit-content;
+				grid-template-columns: 1fr 1fr;
+				gap: 22px;
+
+				@media (max-width: 768px) {
+					flex-wrap: wrap;
+					justify-content: space-between;
+					gap: 20px;
+				}
+
+				.person {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					text-transform: uppercase;
+					width: fit-content;
+
+					img {
+						max-width: 164px;
+						margin-bottom: -9px;
+
+						@media (max-width: 768px) {
+							max-width: 139px;
+						}
+					}
+
+					span {
+						background: #aee0d0;
+						padding: 6px 0 2px;
+						font-family: $font-family_1;
+						font-size: 13px;
+						font-weight: 700;
+						color: #000;
+						text-align: center;
+						margin-bottom: 5px;
+						max-width: 164px;
+						width: 100%;
+
+						@media (max-width: 768px) {
+							max-width: 139px;
+							font-size: 12px;
+						}
+					}
+
+					p {
+						background: #dddddd;
+						padding: 6px 13px 3px;
+						font-family: $font-family_1;
+						font-size: 10px;
+						font-weight: 300;
+						color: $color_2;
+						text-align: left;
+						line-height: 12px;
+						margin: 0;
+						max-width: 217px;
+
+						@media (max-width: 768px) {
+							padding: 6px 5px 3px;
+							max-width: 180px;
+							font-size: 8px;
+						}
+					}
+				}
+
+			}
+
+			.text {
+
+				@media (max-width: 768px) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				p {
+					max-width: 547px;
+					margin: 60px 0 0;
+					font-family: $font-family_1;
+					color: $color_1;
+					font-size: 24px;
+					font-weight: 400;
+
+					@media (max-width: 768px) {
+						text-align: center;
+						font-size: 18px;
+						margin: 0;
+					}
+
+				}
+
+				a {
+					display: block;
+					background: #9f7bf5;
+					color: white;
+					font-size: 18px;
+					font-family: $font-family_1;
+					text-decoration: none;
+					width: 288px;
+					height: 50px;
+					margin-top: 32px;
+					align-content: center;
+					text-align: center;
+					border-radius: 4px;
+
+					@media (max-width: 768px) {
+						width: 100%;
+						font-size: 16px;
+						text-transform: uppercase;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
