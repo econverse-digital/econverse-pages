@@ -1,131 +1,95 @@
+@use "./settings/settings" as *;
+
 #topics-container {
-  padding: 138px 100px;
+  padding: 86px 80px;
   display: flex;
   flex-direction: column;
-  background: #F2F2F2;
+  background: #F1F9F7;
 
-  @media (max-width: 768px) {
-    padding: 70px 20px;
-  }
-
-  span {
-    font-family: 'Work Sans';
+  .title {
     font-size: 32px;
-    color: #181818;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin: 0;
+    font-weight: bold;
+    font-family: $font-family_1;
     text-align: center;
-    margin-bottom: 32px;
-    line-height: 42px;
-    letter-spacing: 0.05em;
-
-    @media (max-width: 768px) {
-      font-size: 28px;
-    }
+    color: $color_1;
+    margin-bottom: 42px;
   }
 
   .topics {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: anchor-center;
     gap: 38px;
-    margin-bottom: 52px;
+    margin-bottom: 60px;
 
     .topic {
       display: flex;
-      align-items: center;
-      gap: 30px;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: end;
-      }
-
+      align-items: start;
+      max-width: 630px;
+      gap: 24px;
 
       .number {
-        font-family: "Homenaje";
-        font-size: 52px;
-        font-weight: 400;
-        color: #181818;
-        line-height: 50px;
-        letter-spacing: 0.02em;
-
-        border-radius: 200px;
-        width: 72px;
-        height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-family: $font-family_1;
+        font-size: 72px;
+        font-weight: bold;
+        color: #AEE0D0;
         margin: 0;
-        position: relative;
-
-
-        @media (max-width: 768px) {
-          width: 30px;
-          height: 30px;
-          padding: 20px;
-        }
-
-        img{
-          width: 61px;
-          position: absolute;
-          z-index: 1;
-          left: -18px;
-          top: -12px;
-        }
-
-        span{
-          z-index: 2;
-          margin: 0;
-          font-family: "Homenaje";
-          font-size: 52px;
-          font-weight: 400;
-          color: #181818;
-        }
+        line-height: normal;
+        width: 95px;
       }
 
       .description-container {
         display: flex;
         flex-direction: column;
-        max-width: 666px;
+        gap: 14px;
 
-        @media (max-width: 768px) {
-          >div {
+        .title {
+          font-family: $font-family_1;
+          font-size: 22px;
+          font-weight: bold;
+          color: $color_1;
+          margin: 0;
+          line-height: 24px;
+          text-align: left;
+        }
+
+        .description {
+          font-family: $font-family_1;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 20px;
+          color: $color_1;
+          margin: 0;
+        }
+      }
+    }
+
+    @include mobile {
+
+      .topic {
+        flex-direction: column;
+        align-items: end;
+
+        .number {
+          width: 30px;
+          height: 30px;
+          padding: 20px;
+        }
+
+        .description-container {
+          > div {
             display: flex;
             align-items: center;
             gap: 10px;
             max-width: 370px;
             margin-left: auto;
           }
-        }
 
-        .title {
-          font-family: "Work Sans";
-          font-size: 18px;
-          font-weight: 600;
-          color: #181818;
-          margin: 0;
-          line-height: 24px;
-          letter-spacing: 0.05em;
-          margin-bottom: 10px;
-
-          @media (max-width: 768px) {
+          .title {
             margin-bottom: 18px;
           }
         }
-
-        .description {
-          font-family: "Work Sans";
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-          color: #181818;
-          margin: 0;
-        }
       }
-
     }
   }
 
@@ -134,20 +98,12 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    background-color: #EDE4C0;
     border-radius: 5px;
     gap: 10px;
     width: 818px;
-    
 
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 10px 0;
-    }
-
-    .duration-time,
-    .duration-link{
+    .duration-link,
+    .duration-time {
       display: flex;
       align-items: center;
       margin: 0;
@@ -161,19 +117,34 @@
         max-height: 26px;
       }
 
-      .duration-text{
-        font-family: 'Work Sans';
+      .duration-text {
+        font-family: $font-family_1;
         margin: 0;
-        word-wrap:break-word;
+        word-wrap: break-word;
         font-size: 16px;
         font-weight: 400;
         line-height: 18.77px;
-        color: #181818;
-
-        @media (max-width: 768px) {
-          font-size: 14px;
-        }
+        color: $color_1;
       }
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 10px 0;
+
+      .duration-link .duration-text,
+      .duration-time .duration-text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 70px 20px;
+
+    span {
+      font-size: 28px;
     }
   }
 }

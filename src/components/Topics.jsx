@@ -1,9 +1,8 @@
 import React from "react";
-import "../../scss/econverse-topics.scss";
+import "../../src/assets/styles/econverse-topics.scss";
 
 import iconDuration from "../assets/svg/icon-duration.svg";
 import iconPlay from "../assets/svg/icon-play.svg";
-import iconStar from "../assets/svg/star.svg";
 import ScrollToSection from "./ScrollButton";
 
 const Topics = () => {
@@ -12,52 +11,65 @@ const Topics = () => {
   const topics = [
     {
       number: "#1",
-      title: "Concepção da marca e o impacto dos parceiros estratégicos:",
+      title: "A evolução da jornada do cliente:",
       description:
-        "Descubra a história por trás da criação da DUDAH! Beauty e aprenda como a escolha dos parceiros certos pode impulsionar significativamente seus resultados no e-commerce, potencializando o crescimento e a inovação da sua marca.",
-      duration: "20 Min",
-    },
-    {
-      number: "#2",
-      title: "Passo a passo para projetos digitais de sucesso e construção de um site de referência:",
-      description:
-        "Aprenda como planejar, implementar e evoluir iniciativas digitais para garantir alta performance e crescimento sustentável, como fez a DUDAH! Beauty. Descubra como a marca construiu uma plataforma digital alinhada com design impactante, funcionalidade eficiente e uma experiência de usuário excepcional.",
-      duration: "20 Min",
-    },
-    {
-      number: "#3",
-      title: "Conexão com o cliente através do CRM:",
-      description:
-        "Explore como um plano de comunicação bem estruturado e o uso estratégico de ferramentas de CRM podem fortalecer relações, fidelizar clientes e alavancar vendas.",
+        "Como a omnicanalidade impacta a decisão de compra e a fidelização.",
       duration: "20 Min",
     },
     {
       number: "#4",
-      title: "Inovação no mercado de cosméticos:",
+      title: "Tendências e inovação no varejo:",
       description:
-        "Descubra as tendências tecnológicas que estão moldando o futuro do setor, como personalização e integração de novas tecnologias.",
+        "O que esperar do futuro e como se preparar para as transformações do mercado.",
+      duration: "20 Min",
+    },
+    {
+      number: "#2",
+      title: "Integração perfeita entre canais físicos e digitais:",
+      description:
+        "Como unificar o estoque das lojas físicas com o e-commerce e marketplaces.",
+      duration: "20 Min",
+    },
+    {
+      number: "#5",
+      title: "Personalização e Engajamento no Case da Banban Calçados",
+      description:
+        "Descubra estratégias e aprendizados que elevaram a experiência do cliente, fortalecendo retenção e fidelização.",
+      duration: "20 Min",
+    },
+    {
+      number: "#3",
+      title: "Tecnologia a favor do varejo:",
+      description:
+        "Como plataformas omnichannel, como a Neomode, podem revolucionar a operação do seu negócio.",
+      duration: "20 Min",
+    },
+    {
+      number: "#6",
+      title: "Logística e fulfillment no omnichannel:",
+      description:
+        "Estratégias para tornar as entregas mais ágeis e eficientes.",
       duration: "20 Min",
     },
   ];
 
   return (
     <div id="topics-container">
-      <span>O QUE você IRÁ APRENDER?</span>
+
+      <span class="title">O que você irá aprender</span>
 
       <div className="topics">
         {topics.map((topics) => (
           <div className="topic">
             {!isMobile && <p className="number">
-              <img src={iconStar} alt="star"/>
-              <span>{topics.number}</span>
+              {topics.number}
             </p>}
             
             <div className="description-container">
               {isMobile && (
                 <div>
                   <p className="number">
-                    <img src={iconStar} alt="star"/>
-                    <span>{topics.number}</span>
+                    {topics.number}
                   </p>
                   <h3 className="title">{topics.title}</h3>
                 </div>
@@ -85,7 +97,7 @@ const Topics = () => {
         </div>
       </div>
 
-      <ScrollToSection text="Quero participar!" sectionId="form-full-container" background="#181818" color="#ede4c0" />
+      <ScrollToSection text="GARANTA SUA VAGA" sectionId="form-full-container" background="#9F7BF5" color="#fff" />
     </div>
   );
 };

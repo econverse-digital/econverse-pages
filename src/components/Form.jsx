@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import "../../scss/econverse-form.scss";
+import "../../src/assets/styles/econverse-form.scss";
 
 import formImage from "../assets/images/bg-form-image-new.png";
-import circles from "../assets/svg/circles.svg";
-import iconArrow from "../assets/svg/icon-arrow.svg";
-import iconArrowLight from "../assets/svg/icon-arrow-light.svg";
+
 import formImageMobile from "../assets/images/bg-form-image-mobile-new.png";
 
 import PopUpForm from "../components/PopUpForm.jsx";
@@ -14,8 +12,6 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [nome, setNome] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-
-  const [isHovered, setIsHovered] = useState(false);
 
   // const handleTelefoneChange = (e) => {
   //   const value = e.target.value.replace(/\D/g, "");
@@ -39,7 +35,7 @@ const Form = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({ nome, email }),
@@ -50,41 +46,43 @@ const Form = () => {
       setNome("");
       setEmail("");
 
-      const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSePVbMxVvknBHZky55FElxzyI27XKDpKXJiQmGTWD72DGThFw/formResponse';
+      const googleFormURL =
+        "https://docs.google.com/forms/d/e/1FAIpQLSePVbMxVvknBHZky55FElxzyI27XKDpKXJiQmGTWD72DGThFw/formResponse";
       const googleFormData = new FormData();
-      googleFormData.append('entry.62206188', email);
+      googleFormData.append("entry.62206188", email);
       fetch(googleFormURL, {
-        method: 'POST',
-        body: googleFormData
-      }).then(response => {
+        method: "POST",
+        body: googleFormData,
+      }).then((response) => {
         if (response.ok) {
-          console.log('Formulário enviado com sucesso');
+          console.log("Formulário enviado com sucesso");
         } else {
-          console.log('Erro ao enviar formulário');
+          console.log("Erro ao enviar formulário");
         }
       });
-
     } else {
       alert("Erro ao enviar o formulário.");
     }
   };
 
   return (
-    <div id="form-container" style={{ backgroundImage: `url(${isMobile? formImageMobile : formImage})`}}>
+    <div
+      id="form-container"
+      style={{
+        backgroundImage: `url(${isMobile ? formImageMobile : formImage})`,
+      }}
+    >
       {showPopup && (
         <PopUpForm show={showPopup} hide={() => setShowPopup(false)} />
       )}
 
-      <div id="form-content" >
+      <div id="form-content">
+
         <div className="left-side">
           <span>Inscreva-se!</span>
-          <p>
-            Se você não conseguir participar da live, registra-se para receber o
-            material gratuitamente :)
-          </p>
-
-          <img src={circles} alt="circles" />
+          <p>Se você não conseguir participar da live, registre-se para receber o material gratuitamente :)</p>
         </div>
+
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="nome">
             Nome
@@ -108,25 +106,16 @@ const Form = () => {
             />
           </label>
 
-          <button       
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            type="submit"
-          > 
-            ENVIAR 
-            <img 
-              src={isHovered ? iconArrowLight : iconArrow} alt="arrow"
-              style={{
-                transform: isHovered ? "translateX(3px)" : "translateX(0)",
-                transition: "transform 0.3s ease",
-              }}
-            
-            /></button>
+          <button type="submit" >
+            ENVIAR
+          </button>
+
         </form>
+
       </div>
+
     </div>
   );
-
 };
 
 export default Form;

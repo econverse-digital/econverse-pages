@@ -1,3 +1,44 @@
+@use "./settings/settings" as *;
+
+#form-full-container {
+  background-size: contain !important;
+
+  #form-content {
+    width: 100% !important;
+    justify-content: end !important;
+    margin-left: auto;
+
+    .form {
+      background: #F2F2F2;
+      padding: 31.5px 27.5px;
+      border-radius: 15px;
+
+      .form-title {
+        font-family: $font-family_1;
+        font-size: 32px;
+        font-weight: bold;
+        color: $color_1;
+        line-height: 1;
+        margin: 0 0 10px 0;
+      }
+
+      label {
+        color: $color_1;
+
+        input {
+          // background: #F2F2F2;
+          color: $color_1;
+          border: 1px solid #DDDDDD;
+
+          &::placeholder {
+            color: #848484;
+          }
+        }
+      }
+    }
+  }
+}
+
 #form-container,
 #form-full-container {
   padding: 80px;
@@ -5,12 +46,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   
-  @media (max-width: 768px) {
+  @include mobile {
     flex-direction: column;
     padding: 70px 20px;
   }
 
-  #form-content{
+  #form-content {
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -18,7 +59,7 @@
     width: 892px;
     margin: auto;
 
-    @media (max-width: 768px) {
+    @include mobile {
       flex-direction: column;
       width: 100%;
       gap: 18px;
@@ -29,30 +70,31 @@
     max-width: 453px;
     width: 100%;
 
-    @media (max-width: 768px) {
+    @include mobile {
       box-sizing: border-box;
     }
 
     span {
-      font-family: 'work Sans', 'Poppins';
+      font-family: $font-family_1;
       font-weight: 400;
       font-size: 42px;
       color: white;
       line-height: 50px;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
+      // text-transform: uppercase;
 
-      @media (max-width: 768px) {
+      @include mobile {
         font-size: 28px;
       }
     }
 
     p {
-      font-family: 'work Sans', 'Poppins';
-      color: white; 
+      font-family: $font-family_1;
+      color: white;
+      font-weight: 300;
       margin: 10px 0 38px 0;
 
-      @media (max-width: 768px) {
+      @include mobile {
         font-size: 14px;
         line-height: 1;
         margin: 10px 0 0 0;
@@ -63,7 +105,7 @@
     img{
       width: 167px;
 
-      @media (max-width: 768px) {
+      @include mobile {
         display: none;
       }
     }
@@ -73,7 +115,7 @@
     width: 100%;
     max-width: 352px;
 
-    @media (max-width: 768px) {
+    @include mobile {
       max-width: none;
     }
 
@@ -82,21 +124,21 @@
       flex-direction: column;
       color: #FDFDFD;
       font-weight: 600;
-      font-family: 'Work Sans', 'Poppins';
+      font-family: $font-family_1;
       font-size: 14px;
       line-height: 24px;
 
       margin-bottom: 14px;
 
       input {
-        font-family: 'work Sans', 'Poppins';
-        background: #FDFDFD;
+        font-family: $font-family_1;
+        background: #fff;
         margin-top: 10px;
         padding: 13px 20px;
         outline: none;
         border: none;
         border-radius: 5px;
-        color: #B5B5B5;
+        color: $color_1;
 
         &::placeholder {
           color: #B5B5B5;
@@ -107,33 +149,22 @@
     }
 
     button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      background: #EDE4C0;
-      width: 138px;
-      border-radius: 90px;
-      border: none;
-      padding: 10px 10px 10px 24px;
-      text-align: center;
-      color: #181818;
-      font-weight: 400;
-      font-family: 'Work Sans', 'Poppins';
+      font-family: $font-family_1;
       cursor: pointer;
-      margin-top: 30px;
+      display: block;
+      margin-top: 24px;
       margin-left: auto;
 
-      &:hover {
-        background: #181818;
-        color: #EDE4C0;
-        border: 1px solid #EDE4C0;
-      }
-
-      img{
-        width: 26px;
-      }
-      
+      width: 100%;
+      max-width: 241px;
+      padding: 14px 0;
+      border-radius: 4px;
+      border: none;
+      background: #9F7BF5;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
     }
   }
 

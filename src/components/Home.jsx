@@ -1,6 +1,8 @@
 import React from "react";
 import "../../scss/econverse-home.scss";
 
+import mainBanner from "../assets/images/webnar-omnicanalidade-main-banner.png";
+
 import bannerImage from "../assets/images/banner-event-desk-cta.png";
 import bannerImageMob from "../assets/images/banner-event-mob-cta.png";
 
@@ -17,9 +19,9 @@ const Home = () => {
   return (
     <div id="home">
 
-      <a href="/#form-full-container">
-        <img src={isMobile ? bannerImageMob : bannerImage} alt="Banner Jornada de compras" />
-      </a>
+      {/* <a href="/#form-full-container" style={{background: "white", display: "block"}}>
+        <img src={isMobile ? bannerImageMob : mainBanner} alt="Banner Jornada de compras" />
+      </a> */}
     
       <FormFull/>
       <About />

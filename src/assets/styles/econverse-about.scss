@@ -1,94 +1,92 @@
+@use "./settings/settings" as *;
+
 #about-container {
-  background: #181818;
-  padding: 150px 98px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	background: #fff;
+	padding: 80px 98px 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
+	.about-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    gap: 120px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 82px 20px;
-    justify-content: unset;
-  }
+		@include mobile {
+			flex-direction: column;
+			gap: 32px;
+		}
 
-  .about-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
+	}
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 32px;
-    }
-  }
+	.left-side {
+		max-width: 416px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
 
-  .left-side {
-    max-width: 518px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+		span {
+			color: $color_1;
+			font-family: $font-family_1;
+			font-size: 32px;
+			font-weight: 300;
+			line-height: 19px;
 
-    span {
-      color: #DDDDDD;
-      font-family: "Homenaje";
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 19px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+			@include mobile {
+				font-size: 16px;
+			}
+		}
 
-      @media (max-width: 768px) {
-        font-size: 16px;
-      }
-    }
+		p {
+			color: $color_1;
+			font-family: $font-family_1;
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 42px;
+			margin: 0;
 
-    p {
-      color: #FDFDFD;
-      font-family: 'Work Sans';
-      font-size: 32px;
-      font-weight: 300;
-      line-height: 42px;
-      letter-spacing: 0.05em;
-      margin: 0;
-      text-transform: uppercase;
+			strong {
+				font-weight: 700;
+			}
 
-      @media (max-width: 768px) {
-        font-size: 28px;
-        line-height: 38px;
-      }
+			@include mobile {
+				font-size: 28px;
+				line-height: 38px;
+			}
+		}
+	}
 
-      strong{
-        font-weight: 700;
-      }
-    }
-  }
+	.about-text {
+		color: $color_1;
+		font-family: $font-family_1;
+		font-size: 18px;
+		line-height: 25px;
+		letter-spacing: 0.05em;
+		max-width: 630px;
+    margin: 0;
 
-  .about-text {
-    color: #DDDDDD;
-    font-family: 'work Sans', 'Poppins';
-    font-size: 14px;
-    line-height: 20p;
-    letter-spacing: 0.05em;
-    max-width: 634px;
-    
-    @media (max-width: 768px) {
-      font-size: 14px;
-      margin: 0;
-    }
+		strong {
+			color: $color_1;
+			font-weight: 700;
+			letter-spacing: 0.8px;
+		}
 
-    strong {
-      color: #EDE4C0;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-    }
+		@include mobile {
+			font-size: 14px;
+			margin: 0;
+		}
+	}
 
-  }
+	.about-image {
+		width: 100%;
+		max-width: 500px;
+	}
 
-  .about-image {
-    width: 100%;
-    max-width: 500px;
-  }
+	@include mobile {
+		flex-direction: column;
+		padding: 82px 20px;
+		justify-content: unset;
+	}
 }

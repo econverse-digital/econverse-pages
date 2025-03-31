@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-SemiBold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Givonic';
+	src: url('./src/assets/fonts/Givonic-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+$color_1: #181818;
+$color_2: #000;
+$font-family_1: "Givonic";
+
+@mixin mobile {
+	@media (max-width: 768px) {
+	  @content;
+	}
+}

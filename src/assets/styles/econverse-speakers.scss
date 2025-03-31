@@ -1,144 +1,181 @@
+@use "./settings/settings" as *;
+
 #speakers-container {
-  padding: 90px 100px;
-  display: flex;
-  flex-direction: column;
-  background: white;
+	padding: 60px 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    padding: 70px 20px;
-  }
+	@include mobile {
+		padding: 70px 20px;
+		background-repeat: no-repeat;
+		background-color: white;
+	}
 
-  .title {
-    font-family: 'Work Sans';
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 42px;
-    letter-spacing: 0.05em;
-    color: #181818;
-    margin: 0 0 32px;
-    text-align: center;
+	.description {
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+		color: $color_1;
+		margin: 0 auto 42px;
+		max-width: 726px;
+		text-align: center;
 
-    @media (max-width: 768px) {
-      font-size: 28px;
-      text-align: center;
-    }
-  }
+		@include mobile {
+			font-size: 14px;
+			text-align: center;
+		}
+	}
 
-  .description {
-    font-family: 'Work Sans';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-    color: #181818;
-    margin: 0 auto 42px;
-    max-width: 726px;
-    text-align: center;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
 
-    @media (max-width: 768px) {
-      font-size: 14px;
-      text-align: center;
-    }
+		@include mobile {
+			align-items: center;
+		}
 
-  }
+		.title {
+			font-family: $font-family_1;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 42px;
+			letter-spacing: 0.05em;
+			color: $color_1;
+			margin: 0 0 32px;
+			text-align: left;
 
-  .speakers {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+			@include mobile {
+				font-size: 28px;
+			}
+		}
 
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: space-between;
-    }
+		.speakers-container {
+			display: flex;
+			gap: 120px;
 
-    .person {
-      // max-width: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-transform: uppercase;
+			@include mobile {
+				flex-direction: column;
+				gap: 32px;
+			}
 
-      img {
-        max-width:164px;
+			.speakers {
+				display: grid;
+				width: fit-content;
+				grid-template-columns: 1fr 1fr;
+				gap: 22px;
 
-        @media (max-width: 768px) {
-          max-width: 81px;
-        }
-      }
+				@include mobile {
+					flex-wrap: wrap;
+					justify-content: space-between;
+					gap: 20px;
+				}
 
-      &-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
+				.person {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					text-transform: uppercase;
+					width: fit-content;
 
-        span {
-          font-family: "Work Sans";
-          font-size: 20px;
-          font-weight: bold;
-          color: black;
-          text-align: left;
-        }
+					img {
+						max-width: 164px;
+						margin-bottom: -9px;
 
-        p {
-          font-family: "Work Sans";
-          font-size: 14px;
-          font-weight: 300;
-          color: black;
-          text-align: left;
-          line-height: 1;
-          margin: 0;
-        }
-      }
-    }
+						@include mobile {
+							max-width: 139px;
+						}
+					}
 
-    .person-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+					span {
+						background: #aee0d0;
+						padding: 6px 0 2px;
+						font-family: $font-family_1;
+						font-size: 13px;
+						font-weight: 700;
+						color: #000;
+						text-align: center;
+						margin-bottom: 5px;
+						max-width: 164px;
+						width: 100%;
 
-      @media (max-width: 768px) {
-        margin: 0 auto;
-      }
+						@include mobile {
+							max-width: 139px;
+							font-size: 12px;
+						}
+					}
 
-      &-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 200px;
+					p {
+						background: #dddddd;
+						padding: 6px 13px 3px;
+						font-family: $font-family_1;
+						font-size: 10px;
+						font-weight: 300;
+						color: $color_2;
+						text-align: left;
+						line-height: 12px;
+						margin: 0;
+						max-width: 217px;
 
-        span {
-          font-family: "Work Sans";
-          font-size: 28px;
-          font-weight: 400;
-          color: #181818;
-          text-align: left;
-          text-transform: uppercase;
+						@include mobile {
+							padding: 6px 5px 3px;
+							max-width: 180px;
+							font-size: 8px;
+						}
+					}
+				}
 
-          @media (max-width: 768px) {
-            font-size: 22px;
-          }
+			}
 
-          strong{
-            font-weight: 600;
-          }
-        }
+			.text {
 
-        p {
-          font-family: "Work Sans";
-          font-size: 14px;
-          font-style: italic;
-          font-weight: 300;
-          color: #181818;
-          text-align: left;
-          line-height: 1;
-          margin: 0;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
+				@include mobile {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				p {
+					max-width: 547px;
+					margin: 60px 0 0;
+					font-family: $font-family_1;
+					color: $color_1;
+					font-size: 24px;
+					font-weight: 400;
+
+					@include mobile {
+						text-align: center;
+						font-size: 18px;
+						margin: 0;
+					}
+
+				}
+
+				a {
+					display: block;
+					background: #9f7bf5;
+					color: white;
+					font-size: 18px;
+					font-family: $font-family_1;
+					text-decoration: none;
+					width: 288px;
+					height: 50px;
+					margin-top: 32px;
+					align-content: center;
+					text-align: center;
+					border-radius: 4px;
+
+					@include mobile {
+						width: 100%;
+						font-size: 16px;
+						text-transform: uppercase;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
 }

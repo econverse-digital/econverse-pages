@@ -1,5 +1,8 @@
 import React from "react";
-import "../../scss/econverse-speakers.scss"
+
+// import "../../scss/econverse-speakers.scss"
+
+import "../../src/assets/styles/econverse-speakers.scss";
 
 import speakerImage1 from "../assets/images/bianca-jardim.png";
 import speakerImage2 from "../assets/images/fabiola-paes.png";
@@ -58,7 +61,7 @@ const Speakers = () => {
 
           <div className="text">
 
-            <p><strong>Não perca essa discussão essencial!</strong> Descubra como a omnicanalidade está transformando a experiência do cliente, explore o case de sucesso da Banban Calçados e veja como a Neomode integra canais para otimizar a jornada de compra.</p>
+            <p><strong>Não perca essa discussão essencial!</strong><br/>Descubra como a omnicanalidade está transformando a experiência do cliente, explore o case de sucesso da Banban Calçados e veja como a Neomode integra canais para otimizar a jornada de compra.</p>
 
             <a href="/">Participe já</a>
           </div>

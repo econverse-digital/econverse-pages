@@ -1,27 +1,34 @@
 import React from "react";
-import "../../scss/econverse-about.scss";
+import "../../src/assets/styles/econverse-about.scss";
 
 import ScrollToSection from "./ScrollButton";
 
+import backgroundText from "../assets/images/about-section-background-text.png";
+
 const About = () => {
   return (
-    <div id="about-container">
-      <div className="about-content">
+    <div id="about-container" style={{ backgroundImage: `url(${backgroundText})`, backgroundRepeat: "no-repeat", backgroundPositionY: "center" }}>
+      <div className="about-content" >
         <div className="left-side">
-          <span>SOBRE 0 WEBINAR</span>
-          <p>O impacto da indústria <br/> de <strong>cosméticos no digital</strong> </p>
+          <span>Sobre o Webnar</span>
+          <p>
+            <strong>Omnicanalidade e o futuro da experiência do cliente</strong>{" "}
+          </p>
         </div>
 
-        <p className="about-text">
-          Participe do nosso webinar exclusivo no <strong>dia  20 de fevereiro, às 19h</strong> e mergulhe no 
-          universo da indústria de cosméticos no digital. Este evento é uma oportunidade 
-          única para entender como <strong>construir um e-commerce de sucesso,</strong> acompanhar 
-          as melhores estratégias de comunicação e explorar os desafios e oportunidades que 
-          este mercado em constante evolução oferece.
-        </p>
+        <div className="right-side">
+          <p className="about-text">
+            Participe do nosso webinar exclusivo no{" "}
+            <strong>dia 13 de maio, às 19h,</strong> e descubra como a omnicanalidade está transformando a experiência do cliente. Em parceria com <strong>Banban Calçados</strong> e <strong>Neomode</strong>, vamos explorar as melhores estratégias para integrar canais, <strong>otimizar a jornada de compra</strong> e aproveitar as <strong>oportunidades desse mercado em constante evolução</strong>. Não perca essa chance de se atualizar com especialistas do setor!
+          </p>
+          <ScrollToSection
+            text="Quero participar!"
+            sectionId="form-full-container"
+            background="#9F7BF5"
+            color="#fff"
+          />
+        </div>
       </div>
-
-      <ScrollToSection text="Inscreva-se agora!" sectionId="form-full-container" background="#ede4c0" color="#181818" />
     </div>
   );
 };
