@@ -60,26 +60,33 @@ const Topics = () => {
 
       <div className="topics">
         {topics.map((topics) => (
+
           <div className="topic">
             {!isMobile && <p className="number">
               {topics.number}
             </p>}
             
             <div className="description-container">
+
               {isMobile && (
-                <div>
+                <>
                   <p className="number">
                     {topics.number}
                   </p>
-                  <h3 className="title">{topics.title}</h3>
-                </div>
+                  <div>
+                    <h3 className="title">{topics.title}</h3>
+                    <p className="description" dangerouslySetInnerHTML={{ __html: topics.description }} ></p>
+                  </div>
+                </>
               )}
 
               {!isMobile && (
-                <h3 className="title">{topics.title}</h3>
+                <>
+                  <h3 className="title">{topics.title}</h3>
+                  <p className="description" dangerouslySetInnerHTML={{ __html: topics.description }} ></p>
+                </>
               )}
 
-              <p className="description" dangerouslySetInnerHTML={{ __html: topics.description }} ></p>
 
             </div>
           </div>

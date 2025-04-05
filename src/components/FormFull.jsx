@@ -3,7 +3,7 @@ import "../../scss/econverse-form.scss";
 
 import formImage from "../assets/images/bg-form-image-new.png";
 
-import formImageMobile from "../assets/images/bg-form-image-mobile-new.png";
+import formImageMobile from "../assets/images/webnar-omnicanalidade-main-banner-mob.png";
 
 import mainBanner from "../assets/images/webnar-omnicanalidade-main-banner.png";
 
@@ -90,7 +90,7 @@ const FormFull = () => {
     <div
       id="form-full-container"
       style={{
-        backgroundImage: `url(${isMobile ? formImageMobile : mainBanner})`,
+        backgroundImage: `url(${isMobile ? formImageMobile : mainBanner })`,
       }}
     >
       
@@ -135,15 +135,14 @@ const FormFull = () => {
             />
           </label>
 
-          <label htmlFor="telefone">
-            Telefone
+          <label htmlFor="cargo">
+            Cargo
             <input
               type="text"
-              name="telefone"
-              value={telefone}
-              placeholder="Telefone"
-              onChange={handleTelefoneChange}
-              maxLength="15" // Limita o comprimento para o formato (XX) XXXXX-XXXX
+              name="cargo"
+              value={cargo}
+              placeholder="Cargo:"
+              onChange={(e) => setCargo(e.target.value)}
             />
           </label>
 
@@ -158,14 +157,15 @@ const FormFull = () => {
             />
           </label>
 
-          <label htmlFor="cargo">
-            Cargo
+          <label htmlFor="telefone">
+            Telefone
             <input
               type="text"
-              name="cargo"
-              value={cargo}
-              placeholder="Cargo:"
-              onChange={(e) => setCargo(e.target.value)}
+              name="telefone"
+              value={telefone}
+              placeholder="Telefone"
+              onChange={handleTelefoneChange}
+              maxLength="15" // Limita o comprimento para o formato (XX) XXXXX-XXXX
             />
           </label>
 

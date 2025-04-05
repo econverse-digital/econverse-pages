@@ -13,6 +13,11 @@
     text-align: center;
     color: $color_1;
     margin-bottom: 42px;
+
+    @include mobile {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
   }
 
   .topics {
@@ -22,11 +27,28 @@
     gap: 38px;
     margin-bottom: 60px;
 
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+
+      .topic:nth-child(1) { order: 1; }
+      .topic:nth-child(3) { order: 2; }
+      .topic:nth-child(5) { order: 3; }
+      .topic:nth-child(2) { order: 4; }
+      .topic:nth-child(4) { order: 5; }
+      .topic:nth-child(6) { order: 6; }
+    }
+
     .topic {
       display: flex;
       align-items: start;
       max-width: 630px;
       gap: 24px;
+
+      @include mobile {
+        gap: 12px;
+      }
 
       .number {
         font-family: $font-family_1;
@@ -36,12 +58,32 @@
         margin: 0;
         line-height: normal;
         width: 95px;
+
+        @include mobile {
+          font-size: 60px;
+          width: 67px;
+          flex-shrink: 0;
+        }
+
       }
 
       .description-container {
         display: flex;
         flex-direction: column;
         gap: 14px;
+
+        @include mobile {
+          flex-direction: row;
+          align-items: center;
+          gap: 30px;
+
+          > div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 5px;
+          }
+        }
 
         .title {
           font-family: $font-family_1;
@@ -51,6 +93,11 @@
           margin: 0;
           line-height: 24px;
           text-align: left;
+
+          @include mobile {
+            font-size: 16px;
+          }
+          
         }
 
         .description {
@@ -60,33 +107,9 @@
           line-height: 20px;
           color: $color_1;
           margin: 0;
-        }
-      }
-    }
 
-    @include mobile {
-
-      .topic {
-        flex-direction: column;
-        align-items: end;
-
-        .number {
-          width: 30px;
-          height: 30px;
-          padding: 20px;
-        }
-
-        .description-container {
-          > div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            max-width: 370px;
-            margin-left: auto;
-          }
-
-          .title {
-            margin-bottom: 18px;
+          @include mobile {
+            font-size: 14px;
           }
         }
       }
@@ -125,6 +148,10 @@
         font-weight: 400;
         line-height: 18.77px;
         color: $color_1;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
 
@@ -132,11 +159,6 @@
       flex-wrap: wrap;
       width: 100%;
       padding: 10px 0;
-
-      .duration-link .duration-text,
-      .duration-time .duration-text {
-        font-size: 14px;
-      }
     }
   }
 

@@ -3,15 +3,30 @@
 #form-full-container {
   background-size: contain !important;
 
+  @include mobile {
+    padding-top: 425px !important;
+  }
+
   #form-content {
     width: 100% !important;
     justify-content: end !important;
     margin-left: auto;
 
+    @include mobile {
+      margin: 0 !important;
+      align-items: center !important;
+    }
+
     .form {
       background: #F2F2F2;
       padding: 31.5px 27.5px;
       border-radius: 15px;
+      box-sizing: border-box;
+
+      @include mobile {
+        padding: 16px;
+        max-width: 350px;
+      }
 
       .form-title {
         font-family: $font-family_1;
@@ -29,6 +44,7 @@
           // background: #F2F2F2;
           color: $color_1;
           border: 1px solid #DDDDDD;
+          box-sizing: border-box;
 
           &::placeholder {
             color: #848484;
@@ -165,6 +181,10 @@
       font-size: 18px;
       font-weight: bold;
       line-height: 1;
+
+      @include mobile {
+        max-width: unset;
+      }
     }
   }
 

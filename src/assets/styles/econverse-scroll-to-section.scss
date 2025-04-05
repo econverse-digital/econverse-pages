@@ -13,4 +13,8 @@
 	text-transform: uppercase;
     margin: 24px auto 0;
     border: none;
+
+	@include mobile {
+		max-width: unset;
+	}
 }

@@ -4,11 +4,16 @@ import "../../src/assets/styles/econverse-about.scss";
 import ScrollToSection from "./ScrollButton";
 
 import backgroundText from "../assets/images/about-section-background-text.png";
+import backgroundTextMob from "../assets/images/about-section-background-text-mob.png";
 
 const About = () => {
+  const isMobile = window.innerWidth < 768;
+
   return (
-    <div id="about-container" style={{ backgroundImage: `url(${backgroundText})`, backgroundRepeat: "no-repeat", backgroundPositionY: "center" }}>
+    <div id="about-container" style={{ backgroundImage: !isMobile ? `url(${backgroundText})` : `url(${backgroundTextMob})` }} >
+      
       <div className="about-content" >
+        
         <div className="left-side">
           <span>Sobre o Webnar</span>
           <p>
