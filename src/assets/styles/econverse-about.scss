@@ -29,6 +29,9 @@
 			gap: 45px;
 		}
 
+		@media (min-width: 391px) and (max-width: 768px) {
+			gap: 80px;
+		}
 	}
 
 	.left-side {
