@@ -1,34 +1,39 @@
 @font-face {
 	font-family: 'Givonic';
-	src: url('./src/assets/fonts/Givonic-Regular.otf') format('opentype');
+	src: url('/fonts/Givonic-Regular.otf') format('opentype'),
+         url('/fonts/Givonic-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Givonic';
-	src: url('./src/assets/fonts/Givonic-Bold.otf') format('opentype');
+	src: url('/fonts/Givonic-Bold.otf') format('opentype'),
+         url('/fonts/Givonic-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Givonic';
-	src: url('./src/assets/fonts/Givonic-Light.otf') format('opentype');
+	src: url('/fonts/Givonic-Light.otf') format('opentype'),
+         url('/fonts/Givonic-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Givonic';
-	src: url('./src/assets/fonts/Givonic-SemiBold.otf') format('opentype');
+	src: url('/fonts/Givonic-SemiBold.otf') format('opentype'),
+         url('/fonts/Givonic-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Givonic';
-	src: url('./src/assets/fonts/Givonic-Thin.otf') format('opentype');
+	src: url('/fonts/Givonic-Thin.otf') format('opentype'),
+         url('/fonts/Givonic-Thin.ttf') format('truetype');
 	font-weight: 100;
 	font-style: normal;
 }
