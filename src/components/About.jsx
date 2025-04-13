@@ -15,7 +15,7 @@ const About = () => {
       <div className="about-content" >
         
         <div className="left-side">
-          <span>Sobre o Webnar</span>
+          <span>Sobre o Webinar</span>
           <p>
             <strong>Omnicanalidade e o futuro da experiência do cliente</strong>{" "}
           </p>

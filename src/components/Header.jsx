@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../scss/econverse-header.scss";
 
+import logo from "../assets/images/econverse-black-logo.png";
+
 const Header = () => {
   const isMobile = window.innerWidth < 768;
 
@@ -13,7 +15,7 @@ const Header = () => {
         <>
           <a href="https://www.econverse.com.br/">
             <img
-              src="https://www.econverse.com.br/wp-content/uploads/2024/01/Logo-para-fundo-claro.png"
+              src={logo}
               alt="Logo Econverse"
             />
           </a>
@@ -66,7 +68,7 @@ const Header = () => {
         <>
           <a href="https://www.econverse.com.br/">
             <img
-              src="https://www.econverse.com.br/wp-content/uploads/2024/01/Logo-para-fundo-claro.png"
+              src={logo}
               alt="Logo Econverse"
             />
           </a>

@@ -7,7 +7,7 @@
 	border-radius: 4px;
 	padding: 16.5px 19px;
     font-size: 18px;
-	font-weight: bold;
+	font-weight: 900;
 	font-family: $font-family_1;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -16,5 +16,6 @@
 
 	@include mobile {
 		max-width: unset;
+		font-weight: 900;
 	}
 }

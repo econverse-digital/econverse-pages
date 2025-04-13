@@ -3,7 +3,7 @@ import "../../scss/econverse-form.scss";
 
 import formImage from "../assets/images/bg-form-image-new.png";
 
-import formImageMobile from "../assets/images/webnar-omnicanalidade-main-banner-mob.png";
+import formImageMobile from "../assets/images/webnar-omnicanalidade-main-banner-mob-new.png";
 
 import mainBanner from "../assets/images/webnar-omnicanalidade-main-banner.png";
 
@@ -170,7 +170,7 @@ const FormFull = () => {
           </label>
 
           <button type="submit" id="fullForm">
-            ENVIAR
+            CADASTRAR
           </button>
         </form>
       </div>

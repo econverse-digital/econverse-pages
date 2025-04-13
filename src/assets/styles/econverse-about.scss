@@ -35,7 +35,7 @@
 	}
 
 	.left-side {
-		max-width: 416px;
+		max-width: 365px;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -63,7 +63,7 @@
 			color: $color_1;
 			font-family: $font-family_1;
 			font-size: 32px;
-			font-weight: bold;
+			font-weight: 900;
 			line-height: 42px;
 			margin: 0;
 
@@ -96,6 +96,7 @@
 		@include mobile {
 			font-size: 16px;
 			margin: 0;
+			font-weight: 450;
 		}
 	}
 
