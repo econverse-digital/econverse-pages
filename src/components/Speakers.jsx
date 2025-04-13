@@ -63,7 +63,7 @@ const Speakers = () => {
 
             <p><strong>Não perca essa discussão essencial!</strong><br/>Descubra como a omnicanalidade está transformando a experiência do cliente, explore o case de sucesso da Banban Calçados e veja como a Neomode integra canais para otimizar a jornada de compra.</p>
 
-            <a href="/">Participe já</a>
+            <a href="/">PARTICIPE JÁ</a>
           </div>
 
         </div>
