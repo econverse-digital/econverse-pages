@@ -14,6 +14,10 @@
     margin: 24px auto 0;
     border: none;
 
+	&:hover {
+        background: #5E3EA7 !important;
+    }
+
 	@include mobile {
 		max-width: unset;
 		font-weight: 900;

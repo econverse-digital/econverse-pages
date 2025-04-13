@@ -141,7 +141,7 @@ const FormFull = () => {
               type="text"
               name="cargo"
               value={cargo}
-              placeholder="Cargo:"
+              placeholder="Digite seu cargo"
               onChange={(e) => setCargo(e.target.value)}
             />
           </label>
@@ -152,7 +152,7 @@ const FormFull = () => {
               type="text"
               name="empresa"
               value={empresa}
-              placeholder="Empresa:"
+              placeholder="Digite sua empresa"
               onChange={(e) => setEmpresa(e.target.value)}
             />
           </label>
@@ -163,7 +163,7 @@ const FormFull = () => {
               type="text"
               name="telefone"
               value={telefone}
-              placeholder="Telefone"
+              placeholder="(00) 0000-0000"
               onChange={handleTelefoneChange}
               maxLength="15" // Limita o comprimento para o formato (XX) XXXXX-XXXX
             />

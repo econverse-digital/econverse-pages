@@ -88,23 +88,34 @@
 					width: fit-content;
                     z-index: 2;
 
+					@media (min-width: 1024px) {
+						min-width: 190px;
+						min-height: 220.5px;
+					}
+
                     &:first-child {
                         position: relative;
 
-                        // &::before {
-                        //     content: '';
-                        //     background: url("../images/webnar-omnicanalidade-circle.png") no-repeat;
-                        //     background-size: contain;
-                        //     position: absolute;
-                        //     top: -40px;
-                        //     left: -40px;
-                        //     width: 100%;
-                        //     height: 60%;
-                        //     z-index: -1;
-                        // }
-                    }
 
-					
+						@media (min-width: 1024px) {
+
+							img {
+								z-index: -1;
+							}
+
+							&::before {
+								content: '';
+								background: url("../images/webnar-omnicanalidade-circle.png") no-repeat;
+								background-size: contain;
+								position: absolute;
+								top: -50px;
+								left: -65px;
+								width: 100%;
+								height: 60%;
+								z-index: 1;
+							}
+						}
+                    }
 
 					img {
 						max-width: 164px;
@@ -119,7 +130,7 @@
 
 					&:last-child {
 						span {
-							margin-top: 12px;
+							// margin-top: 12px;
 						}
 						> p {
 							padding-right: 3px;
@@ -144,6 +155,7 @@
 
 						@include mobile {
 							max-width: 139px;
+							padding: 5px;
 							font-size: 12px;
 						}
 					}
@@ -215,6 +227,10 @@
 					align-content: center;
 					text-align: center;
 					border-radius: 4px;
+
+					&:hover {
+						background: #5E3EA7;
+					  }
 
 					@include mobile {
 						width: 100%;

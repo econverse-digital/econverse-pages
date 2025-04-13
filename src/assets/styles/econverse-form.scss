@@ -158,8 +158,8 @@
 
         &::placeholder {
           color: #B5B5B5;
-          font-weight: 900;
           font-size: 14px;
+          // font-weight: 900;
         }
       }
     }
@@ -181,6 +181,10 @@
       font-size: 18px;
       font-weight: 900;
       line-height: 1;
+
+      &:hover {
+        background: #5E3EA7;
+      }
 
       @include mobile {
         max-width: unset;

@@ -186,6 +186,10 @@
 					text-align: center;
 					border-radius: 4px;
 
+					&:hover {
+						background: #5E3EA7;
+					  }
+
 					@include mobile {
 						width: 100%;
 						font-size: 16px;
