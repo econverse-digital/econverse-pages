@@ -104,7 +104,10 @@ const Topics = () => {
         </div>
       </div>
 
-      <ScrollToSection text="GARANTA SUA VAGA" sectionId="form-full-container" background="#9F7BF5" color="#fff" />
+      <a href="#form-content">
+        <ScrollToSection text="GARANTA SUA VAGA" sectionId="form-full-container" background="#9F7BF5" color="#fff" />
+      </a>
+
     </div>
   );
 };

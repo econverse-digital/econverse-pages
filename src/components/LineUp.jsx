@@ -63,7 +63,7 @@ const Lineup = () => {
 
             <p>Tenha acesso a <strong>atualizações do mercado</strong>, <strong>especialistas de peso</strong> e <strong>conteúdos exclusivos</strong> que podem transformar sua jornada.</p>
 
-            <a href="/">FAÇA SUA INSCRIÇÃO</a>
+            <a href="#form-content">FAÇA SUA INSCRIÇÃO</a>
           </div>
 
         </div>

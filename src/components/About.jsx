@@ -26,12 +26,17 @@ const About = () => {
             Participe do nosso webinar exclusivo no{" "}
             <strong>dia 13 de maio, às 19h,</strong> e descubra como a omnicanalidade está transformando a experiência do cliente. Em parceria com <strong>Banban Calçados</strong> e <strong>Neomode</strong>, vamos explorar as melhores estratégias para integrar canais, <strong>otimizar a jornada de compra</strong> e aproveitar as <strong>oportunidades desse mercado em constante evolução</strong>. Não perca essa chance de se atualizar com especialistas do setor!
           </p>
+          
+
+        <a href="#form-content">
           <ScrollToSection
             text="Quero participar!"
             sectionId="form-full-container"
             background="#9F7BF5"
             color="#fff"
           />
+        </a>
+
         </div>
       </div>
     </div>
