@@ -15,7 +15,7 @@ import backgroundMobile from "../assets/images/speakers-bg-mob.png";
 const Speakers = () => {
   const speakers = [
     {
-      name: "<strong>bianca jardim</strong> reis",
+      name: "<strong>bianca jardim</strong>",
       cargo: "Diretora Comercial na Econverse",
       image: speakerImage1,
     },

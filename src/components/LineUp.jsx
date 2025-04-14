@@ -15,7 +15,7 @@ import circleBackground from "../assets/images/webnar-omnicanalidade-circle.png"
 const Lineup = () => {
   const lineup = [
     {
-      name: "<strong>bianca jardim</strong> reis",
+      name: "<strong>bianca jardim</strong>",
       cargo: "Diretora Comercial na Econverse",
       image: speakerImage1,
     },
