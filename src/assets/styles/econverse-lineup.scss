@@ -185,6 +185,7 @@
 			.text {
                 display: flex;
                 align-items: center;
+				justify-content: center;
                 gap: 50px;
 
 				@include mobile {
@@ -201,7 +202,7 @@
 					font-size: 18px;
 					font-weight: 300;
                     margin: 0;
-					max-width: 315px;
+					max-width: 385px;
 
                     strong {
                         color: #AEE0D0;
