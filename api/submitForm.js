@@ -28,7 +28,7 @@ export default async function handler(req, res) {
           payload: {
             name: nome,
             email: email,
-            tags: ["Evento Econverce Webinar Omnicanalidade"],
+            tags: ["Evento Econverse Webinar Omnicanalidade"],
             conversion_identifier: "Econverse Webinar Omnicanalidade",
           }
         })

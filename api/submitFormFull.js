@@ -30,7 +30,7 @@ export default async function handler(req, res) {
               personal_phone: phone,
               company_name: enterprise,
               job_title: role,
-              tags: ["Evento Econverce Webinar Omnicanalidade"],
+              tags: ["Evento Econverse Webinar Omnicanalidade"],
               conversion_identifier: "Econverse Webinar Omnicanalidade",
             }
           })

@@ -47,22 +47,23 @@
 			margin-right: auto;
 		}
 
-		span {
+		h1 {
 			color: $color_1;
 			font-family: $font-family_1;
-			font-size: 32px;
+			font-size: 42px;
 			font-weight: 300;
 			line-height: 19px;
+			margin: 0;
 
 			@include mobile {
-				font-size: 26px;
+				font-size: 32px;
 			}
 		}
 
 		p {
 			color: $color_1;
 			font-family: $font-family_1;
-			font-size: 32px;
+			font-size: 42px;
 			font-weight: 900;
 			line-height: 42px;
 			margin: 0;
@@ -72,7 +73,7 @@
 			}
 
 			@include mobile {
-				font-size: 26px;
+				font-size: 32px;
 				line-height: 38px;
 			}
 		}

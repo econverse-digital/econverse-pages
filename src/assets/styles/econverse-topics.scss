@@ -7,7 +7,7 @@
   background: #F1F9F7;
 
   .title {
-    font-size: 73px;
+    font-size: 42px;
     font-weight: 900;
     font-family: $font-family_1;
     text-align: center;
@@ -15,7 +15,7 @@
     margin-bottom: 42px;
 
     @include mobile {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 32px;
     }
   }
